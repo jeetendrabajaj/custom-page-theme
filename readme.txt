@@ -1,6 +1,6 @@
 === Custom Page Theme - A Wordpress Theme Generator Plugin===
 Contributors: J.K.
-Author URI: 
+Author URI: https://www.linkedin.com/in/jeetendra-bajaj-14020b14/
 Plugin URI: 
 Tags: design, theme, custom page design, custom page theme, page theme, design theme, auto designing, theme designing
 Requires at least: 4.1
