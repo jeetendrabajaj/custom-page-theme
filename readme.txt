@@ -1,8 +1,7 @@
 === Custom Page Theme - A Wordpress Theme Generator Plugin===
 Contributors: J.K.
-Donate link: http://creative-software-design-solutions.com/
-Author URI: http://creative-software-design-solutions.com/
-Plugin URI: http://creative-software-design-solutions.com/wordpress-user-registration-aide-force-add-new-user-fields-on-registration-form/
+Author URI: 
+Plugin URI: 
 Tags: design, theme, custom page design, custom page theme, page theme, design theme, auto designing, theme designing
 Requires at least: 4.1
 Tested up to: 4.8
@@ -77,7 +76,7 @@ Once installed & activation on wordpress website. Under Admin Panel the plugin a
 
 == Add Custom Page Theme ==
 
-A WordPress theme needs only two files to exist – style.css and index.php. So if we can write a seperate style.css and index.php file and save it in a 
+A WordPress theme needs only two files to exist â€“ style.css and index.php. So if we can write a seperate style.css and index.php file and save it in a 
 theme, and then we can hook that custom theme with required page from admin panel without any code intervention. 
 
 Below with 3 samples i will try to explain the complete idea. Starting with a very simple Sample, we will try little more complex pages too in next 2 Samples.
