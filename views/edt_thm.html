@@ -1,0 +1,48 @@
+<div class="wrap">
+<h2>Add Custom page theme</h2>
+
+<form method="post" action="options.php">
+    <?php settings_fields( 'wpimap-plugin-settings-group' ); ?>
+    <?php do_settings_sections( 'wpimap-plugin-settings-group' ); 
+	$imap_settings = json_decode(get_option('imap_settings'));
+	?>
+
+	<table class="">
+		<tr valign="top">
+			<td><strong>To create a new custom page theme folow some simple rules.</strong></td>
+		</tr>
+		<tr valign="top">
+			<td>1. Define the title of the theme.</td>
+		</tr>
+		<tr valign="top">
+			<td>2. A WordPress theme needs atleast two files to be exist - style.css and index.php</td>
+		</tr>
+		<tr valign="top">
+			<td>&nbsp;</td>
+		</tr>
+	</table>
+	<table class="form-table">
+		<tr valign="top">
+		<th scope="row">Title</th>
+		<td><input type="text" name="cstm_page_theme[title]" value="" /></td>
+		</tr>
+
+		<tr valign="top">
+		<th scope="row">Description</th>
+		<td><textarea rows="4" cols="50" name="cstm_page_theme[description]"></textarea> </td>
+		</tr>
+
+		<tr valign="top">
+		<th scope="row">Upload file (index.php)</th>
+		<td><input type="file" name="cstm_page_theme[index]" value="" /><br/><i></i></td>
+		</tr>
+		 
+		<tr valign="top">
+		<th scope="row">Upload file (style.css)</th>
+		<td><input type="file" name="cstm_page_theme[style]" value="" /></td>
+		</tr>
+	</table>
+    <?php submit_button(); ?>
+
+</form>
+</div>

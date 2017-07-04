@@ -1,0 +1,122 @@
+<div class="wrap">
+<h2>Add Custom page theme</h2>
+<table class="">
+		<tr valign="top">
+			<td><strong>To create a new custom page theme folow some simple rules.</strong></td>
+		</tr>
+		<tr valign="top">
+			<td>1. Define the title of the theme.</td>
+		</tr>
+		<tr valign="top">
+			<td>2. A WordPress theme needs atleast two files to be exist - <i>style.css</i> and <i>index.php</i></td>
+		</tr>
+		<tr valign="top">
+			<td><b>3. Be Sure:</b></td>
+		</tr>
+		<tr valign="top">
+			<td>&nbsp;&nbsp;&nbsp;a. <i>index.php</i> file must must not contain the header and footer markups, So remove the html before start body tag <i>&lt;body&gt;</i> and after end body tag <i>&lt;/body&gt;</i>.</td>
+		</tr>
+		<tr valign="top">
+			<td>&nbsp;&nbsp;&nbsp;b. In <i>index.php</i> file no need to link the <i>CSS</i> or <i>JavaSrcript</i> files. Just upload the <i>CSS</i> or <i>JavaSrcript</i> files & Let the plugin enqueue <i>CSS</i> or <i>JavaSrcript</i> files in the defined order.</td>
+		</tr>
+		<tr valign="top">
+			<td>&nbsp;</td>
+		</tr>
+	</table>
+	 <style>
+         .sortable { list-style-type: none; margin: 0; 
+            padding: 0; width: 85%; }
+         .sortable li { margin: 0 3px 3px 3px; padding: 0.4em; 
+            padding-left: 1.5em; font-size: 17px; height: auto; }
+         .default {
+            background: #cedc98;
+            border: 1px solid #DDDDDD;
+            color: #333333;
+         }
+      </style>
+	 <script>
+         jQuery(function() {
+            jQuery( "#supportive_js" ).sortable();
+			jQuery( "#supportive_css" ).sortable();
+         });
+      </script>
+<form method="post" action="<?php echo admin_url( 'admin.php' ); ?>" enctype="multipart/form-data">
+   <input type="hidden" name="action" value="cstpgthm10500" />
+	<table class="form-table">
+		<tr valign="top">
+		<th scope="row">Title<font>*</font></th>
+		<td><input type="text" name="theme_title" value="" /></td>
+		</tr>
+
+		<tr valign="top">
+		<th scope="row">Description<font>*</font></th>
+		<td><textarea rows="4" cols="50" name="theme_description"></textarea> </td>
+		</tr>
+
+		<tr valign="top">
+		<th scope="row">Upload file (index.php)<font>*</font></th>
+		<td><input type="file" name="theme_index_markup" value="" /><br/><i></i></td>
+		</tr>
+		 
+		<tr valign="top">
+		<th scope="row">Upload file (style.css)<font>*</font></th>
+		<td><input type="file" name="theme_style" value="" /></td>
+		</tr>
+
+		<tr valign="top">
+		<td colspan="2">
+			<fieldset>
+				<legend>Upload Supportive JS files</legend>
+				<button id="add_field_button_js" class="add_field_button">Add More JS</button><br/><br/>
+				<div><span><label>File Title<font>*</font>:</label></div>
+				<ul id = "supportive_js" class="sortable input_fields_wrap">
+					 <li class = "default"><span><input type="text" name="theme_js_title[]"></span>&nbsp;&nbsp;&nbsp;<input type="file" name="theme_js[]" value="" /><a href="#" class="remove_field">Remove</a></li>
+				 </ul>
+			</fieldset>
+		</td>
+		</tr>
+
+		<tr valign="top">
+		<td colspan="2">
+			<fieldset>
+				<legend>Upload Supportive CSS files</legend>
+				<button id="add_field_button_css" class="add_field_button">Add More CSS</button><br/><br/>
+				<div><span><label>File Title<font>*</font>:</label></div>
+				<ul id = "supportive_css" class="sortable input_fields_wrap">
+					 <li class = "default"><span><input type="text" name="theme_css_title[]"></span>&nbsp;&nbsp;&nbsp;<input type="file" name="theme_css[]" value="" /><a href="#" class="remove_field">Remove</a></li>
+				 </ul>
+			</fieldset>
+		</td>
+		</tr>
+
+		<tr valign="top">
+		<td colspan="2">
+			<fieldset>
+				<legend>Upload Supportive Font Files</legend>
+				<button id="add_field_button_fonts" class="add_field_button">Add More Font Files</button><br/><br/>
+				<ul id = "supportive_fonts" class="sortable input_fields_wrap">
+					 <li class = "default"><input type="file" name="theme_fonts[]" value="" /><a href="#" class="remove_field">Remove</a></li>
+				 </ul>
+			</fieldset>
+		</td>
+		</tr>
+
+		<tr valign="top">
+		<td colspan="2">
+			<fieldset>
+				<legend>Upload Supportive Images</legend>
+				<button id="add_field_button_img" class="add_field_button">Add More Images</button><br/><br/>
+				<ul id = "supportive_img" class="sortable input_fields_wrap">
+					 <li class = "default"><input type="file" name="theme_img[]" value="" /><a href="#" class="remove_field">Remove</a></li>
+				 </ul>
+			</fieldset>
+		</td>
+		</tr>
+
+	</table>
+	
+	
+    <?php submit_button(); ?>
+
+</form>
+</div>
