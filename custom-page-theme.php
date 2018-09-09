@@ -1,10 +1,14 @@
 <?PHP
 /**
 Plugin Name: Custom Page Theme
-Plugin URI: http://patriotmemory.us 
-Description: Using this plugin you can craft your wordpress page with a completely different view, irrespective of whatever view your active theme applies over it, with no (or vary small programming). It's page specific theming concept allows you to apply any dormant or idle theme to your wordpress page, through admin panel without any programming intervention. It's Add/Edit Custom Page theme wizard also helps you to convert your html markup into a wordpress theme. So with this plugin you can design your wordpress with you custom html design.
+Plugin URI: https://github.com/jeetendrabajaj/custom-page-theme/
+Description: An alternate for Custom Page Templating in Wordpress, that resolves all the below mentioned limitations of Custom Page Templating. Imagine a wordpress websites having various pages implemented with Custom Page Templats, now  
+ it's limitations are 1) All the styling, javascripts, images and font files for each Custom Page template will be saved in same css, js, images & fonts folders of Active Theme folder.
+ 2) Removal of styling, javascripts, images and font files for the pages implemented with Custom Page Templats and have no more use is complex.
+ 3) While upgradig Active theme special precaution required to maintain styling, javascripts, images and font files of Custom Page Templats.
+ My Custom Page Theme plugin resolves all these above mentioned limitations
 Version: 1.0 
-Author: J.K.
+Author: Jeetendra Bajaj
 Author URI: https://www.linkedin.com/in/jeetendra-bajaj-14020b14/ */ 
 
 if ( ! class_exists( 'CSTM_PAGE_THEME' ) ) :
